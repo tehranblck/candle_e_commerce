@@ -1,15 +1,24 @@
 import { getProductsByCategory, getCategoryById } from '@/data/products';
 import { notFound } from 'next/navigation';
 import ProductCard from '@/components/ProductCard';
+import { Metadata } from 'next';
 
-type Props = {
+interface PageProps {
     params: {
         categoryId: string;
     };
-    searchParams?: { [key: string]: string | string[] | undefined };
-};
+}
 
-export default async function KolleksiyaDetayPage({ params }: Props) {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const category = getCategoryById(params.categoryId);
+
+    return {
+        title: `${category?.name} | Şam Dünyası`,
+        description: category?.description,
+    };
+}
+
+export default function KolleksiyaDetayPage({ params }: PageProps) {
     const category = getCategoryById(params.categoryId);
     if (!category) {
         notFound();
@@ -41,13 +50,4 @@ export default async function KolleksiyaDetayPage({ params }: Props) {
             </div>
         </main>
     );
-}
-
-export async function generateMetadata({ params }: Props) {
-    const category = getCategoryById(params.categoryId);
-
-    return {
-        title: `${category?.name} | Şam Dünyası`,
-        description: category?.description,
-    };
 } 
