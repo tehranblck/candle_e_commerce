@@ -2,10 +2,12 @@ import { getProductsByCategory, getCategoryById } from '@/data/products';
 import { notFound } from 'next/navigation';
 import ProductCard from '@/components/ProductCard';
 
+interface CategoryParams {
+    categoryId: string;
+}
+
 interface PageProps {
-    params: {
-        categoryId: string;
-    };
+    params: CategoryParams;
 }
 
 export default function KolleksiyaDetayPage({ params }: PageProps) {
