@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { useCart } from '@/contexts/CartContext';
 import type { Product } from '@/data/products';
-import Link from 'next/link';
 
 const ProductCard = ({ product }: { product: Product }) => {
     const { addToCart } = useCart();

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
-import { products, getBestSellers, categories } from '@/data/products';
+import { getBestSellers } from '@/data/products';
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { heroSlides } from '@/data/hero-slides';
@@ -189,7 +189,7 @@ export default function Home() {
               >
                 {/* Quote Icon */}
                 <div className="absolute -top-4 left-6">
-                  <span className="text-4xl text-[#FF7F50]">"</span>
+                  <span className="text-4xl text-[#FF7F50]">&quot;</span>
                 </div>
 
                 {/* Testimonial Content */}
