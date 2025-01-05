@@ -3,19 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FFF0DE;
+  --foreground: #703E24;
+  --primary: #E67E45;
+  --secondary: #FFB088;
+  --accent: #BF4E1F;
+  --text-light: #955735;
+  --gradient-start: #FF7F50;
+  --gradient-end: #D35400;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-playfair);
+}
+
+.font-sans {
+  font-family: var(--font-inter);
+}
+
+/* Toast Stilleri */
+.Toastify__toast {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  border-radius: 4px;
+}
+
+.Toastify__toast--success {
+  background: var(--primary) !important;
+  color: #FFF5EC;
+}
+
+.Toastify__toast--info {
+  background: var(--accent) !important;
+  color: #FFF5EC;
+}
+
+.Toastify__toast--error {
+  background: #DC2626 !important;
+  color: #FDF8F3;
+}
+
+.Toastify__close-button {
+  color: #FDF8F3 !important;
+  opacity: 0.7;
+}
+
+.Toastify__progress-bar {
+  background: rgba(253, 248, 243, 0.3) !important;
 }
