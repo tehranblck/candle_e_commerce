@@ -95,7 +95,3 @@ export default function SebetPage() {
     );
 }
 
-export const metadata = {
-    title: 'Səbət | Şam Dünyası',
-    description: 'Alış-veriş səbətiniz',
-} 
