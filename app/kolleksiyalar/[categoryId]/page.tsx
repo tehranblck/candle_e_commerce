@@ -2,14 +2,8 @@ import { getProductsByCategory, getCategoryById } from '@/data/products';
 import { notFound } from 'next/navigation';
 import ProductCard from '@/components/ProductCard';
 
-type Props = {
-    params: {
-        categoryId: string
-    }
-    searchParams: { [key: string]: string | string[] | undefined }
-}
 
-export default async function KolleksiyaDetayPage({ params, searchParams }: Props) {
+export default async function KolleksiyaDetayPage({ params }: any) {
     const category = getCategoryById(params.categoryId);
     if (!category) {
         notFound();
