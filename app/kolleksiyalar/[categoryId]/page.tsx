@@ -4,14 +4,6 @@ import ProductCard from '@/components/ProductCard';
 import { Metadata } from 'next';
 
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
-    const category = getCategoryById(params.categoryId);
-
-    return {
-        title: `${category?.name} | Şam Dünyası`,
-        description: category?.description,
-    };
-}
 
 export default function KolleksiyaDetayPage({ params }: any) {
     const category = getCategoryById(params.categoryId);
