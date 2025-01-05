@@ -35,4 +35,13 @@ export default async function KolleksiyaDetayPage({ params }: any) {
             </div>
         </main>
     );
+}
+
+export async function generateMetadata({ params }: { params: { categoryId: string } }) {
+    const category = getCategoryById(params.categoryId);
+
+    return {
+        title: `${category?.name} | Şam Dünyası`,
+        description: category?.description,
+    }
 } 

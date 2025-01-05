@@ -34,4 +34,9 @@ export default function KampaniyalarPage() {
             </div>
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Kampaniyalar | Şam Dünyası',
+    description: 'Şam Dünyası xüsusi kampaniyalar və endirimlər',
 } 

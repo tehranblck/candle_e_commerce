@@ -93,4 +93,9 @@ export default function SebetPage() {
             </div>
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Səbət | Şam Dünyası',
+    description: 'Alış-veriş səbətiniz',
 } 

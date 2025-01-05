@@ -17,8 +17,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mum Dünyası - El Yapımı Kokulu Mumlar",
-  description: "El yapımı, doğal kokulu mumlar ve dekoratif mum çeşitleri",
+  title: "Şam Dünyası | Əl İşi Şamlar",
+  description: "Əl işi, təbii materiallarla hazırlanan xüsusi dizayn şamlar. 100% soya mumu və təbii efir yağları ilə hazırlanır.",
+  keywords: ['şam', 'əl işi', 'təbii şam', 'soya şamı', 'hədiyyəlik şam', 'dekorativ şam', 'ətirli şam'],
+  openGraph: {
+    title: 'Şam Dünyası | Əl İşi Şamlar',
+    description: 'Əl işi, təbii materiallarla hazırlanan xüsusi dizayn şamlar',
+    images: ['/candle.jpg'],
+  },
+  icons: {
+    icon: '/logo.png',
+  }
 };
 
 export default function RootLayout({

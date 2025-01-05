@@ -17,4 +17,9 @@ export default function YeniMehsullarPage() {
             </div>
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Yeni Məhsullar | Şam Dünyası',
+    description: 'Şam Dünyası yeni gələn məhsullar',
 } 

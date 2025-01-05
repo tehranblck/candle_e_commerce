@@ -24,4 +24,9 @@ export default function HaqqimizdaPage() {
             </div>
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Haqqımızda | Şam Dünyası',
+    description: 'Şam Dünyası - əl işi şamların hazırlanması və satışı',
 } 

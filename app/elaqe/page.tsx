@@ -75,4 +75,9 @@ export default function ElaqePage() {
             </div>
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Əlaqə | Şam Dünyası',
+    description: 'Şam Dünyası ilə əlaqə saxlayın',
 } 

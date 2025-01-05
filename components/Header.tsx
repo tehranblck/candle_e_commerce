@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ShoppingBag, Search, Menu, X } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import SearchModal from './SearchModal';
+import Image from 'next/image';
 
 const Header = () => {
     const { totalItems } = useCart();
@@ -55,7 +56,7 @@ const Header = () => {
                 </div>
 
                 {/* Ana Header */}
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-12 py-4">
                     <div className="flex items-center justify-between h-16">
                         {/* Mobil Menü Butonu */}
                         <button
@@ -67,7 +68,7 @@ const Header = () => {
 
                         {/* Logo */}
                         <Link href="/" className="font-serif text-2xl text-[#703E24] hover:text-[#E67E45] transition-colors">
-                            Şam Dünyası
+                            <Image src="/logo.svg" quality={100} priority alt="Şam Dünyası" width={80} height={60} />
                         </Link>
 
                         {/* Desktop Menü */}

@@ -10,6 +10,20 @@ export function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+    const product = products.find(p => p.id === parseInt(params.id));
+
+    return {
+        title: `${product?.name} | Şam Dünyası`,
+        description: product?.description,
+        openGraph: {
+            title: `${product?.name} | Şam Dünyası`,
+            description: product?.description,
+            images: [product?.image || '/og-image.jpg'],
+        }
+    }
+}
+
 export default function UrunDetay({ params }: any) {
     const product = products.find(p => p.id === parseInt(params.id));
 
