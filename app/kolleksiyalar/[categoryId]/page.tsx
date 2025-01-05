@@ -3,13 +3,8 @@ import { notFound } from 'next/navigation';
 import ProductCard from '@/components/ProductCard';
 import { Metadata } from 'next';
 
-interface PageProps {
-    params: {
-        categoryId: string;
-    };
-}
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
     const category = getCategoryById(params.categoryId);
 
     return {
@@ -18,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
 }
 
-export default function KolleksiyaDetayPage({ params }: PageProps) {
+export default function KolleksiyaDetayPage({ params }: any) {
     const category = getCategoryById(params.categoryId);
     if (!category) {
         notFound();
