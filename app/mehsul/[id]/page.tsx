@@ -3,11 +3,6 @@ import Image from 'next/image';
 import { products, getCategoryById } from '@/data/products';
 import AddToCartButton from '@/components/AddToCartButton';
 
-interface PageProps {
-    params: {
-        id: string;
-    };
-}
 
 export function generateStaticParams() {
     return products.map((product) => ({
@@ -15,7 +10,7 @@ export function generateStaticParams() {
     }));
 }
 
-export default function UrunDetay({ params }: PageProps) {
+export default function UrunDetay({ params }: any) {
     const product = products.find(p => p.id === parseInt(params.id));
 
     if (!product) {

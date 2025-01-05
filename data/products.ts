@@ -7,6 +7,13 @@ export interface Product {
     categoryId: string;
     isNew: boolean;
     isBestSeller: boolean;
+    stock?: number;
+    specifications?: {
+        burnTime?: string;
+        weight?: string;
+        scent?: string;
+        material?: string;
+    };
 }
 
 export interface Category {
