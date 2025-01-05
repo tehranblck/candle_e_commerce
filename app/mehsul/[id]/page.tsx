@@ -10,7 +10,7 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: any) {
     const product = products.find(p => p.id === parseInt(params.id));
 
     return {
