@@ -2,15 +2,14 @@ import { getProductsByCategory, getCategoryById } from '@/data/products';
 import { notFound } from 'next/navigation';
 import ProductCard from '@/components/ProductCard';
 
-interface CategoryParams {
-    categoryId: string;
+type Props = {
+    params: {
+        categoryId: string
+    }
+    searchParams: { [key: string]: string | string[] | undefined }
 }
 
-interface PageProps {
-    params: CategoryParams;
-}
-
-export default function KolleksiyaDetayPage({ params }: PageProps) {
+export default async function KolleksiyaDetayPage({ params, searchParams }: Props) {
     const category = getCategoryById(params.categoryId);
     if (!category) {
         notFound();
